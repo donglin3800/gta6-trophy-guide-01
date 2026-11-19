@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI (PS5)</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: checklist, platinum roadmap, missable flags and cited guides.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; Unofficial fan guide</p>
+  <h1>Leonida Trophy Guide</h1>
+  <p class="lede">All 55 trophies, with a checklist, a road to the platinum, and a cited guide for every one. Works fully offline &mdash; your progress never leaves this browser.</p>
+</header>
+
+<section class="progress" aria-label="Progress">
+  <div class="progress-big"><span id="earnedCount">0</span><span class="of"> / 55 earned</span></div>
+  <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div>
+  <p class="progress-line" id="progressLine">0% &mdash; the platinum is 54 trophies away.</p>
+  <ul class="grade-counts" id="gradeCounts"></ul>
+</section>
+
+<nav class="tabs" aria-label="Guide sections">
+  <button type="button" data-view="checklist" class="tab active" aria-current="true">Checklist</button>
+  <button type="button" data-view="roadmap" class="tab">Roadmap to Platinum</button>
+  <button type="button" data-view="sources" class="tab">Sources</button>
+</nav>
+
+<main>
+  <section id="view-checklist" class="view">
+    <div class="controls">
+      <label class="search">Search <input id="search" type="search" placeholder="Name or description&hellip;" autocomplete="off"></label>
+      <label>Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <div class="chips" id="kindChips" role="group" aria-label="Filter by kind"></div>
+      <label class="check"><input id="missableOnly" type="checkbox"> Missable only</label>
+      <label class="check"><input id="earnedOnly" type="checkbox"> Earned only</label>
+      <label class="check spoiler"><input id="spoiler" type="checkbox"> Spoiler-free: hide story trophies until earned</label>
+      <button id="export" type="button">Export progress</button>
+      <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+    </div>
+    <p class="online-note">There are <strong>no online trophies</strong> at launch &mdash; all 55 unlock in single player. The &ldquo;Online&rdquo; filter below shows that empty set on purpose.</p>
+    <p class="count-line" id="countLine"></p>
+    <ul class="trophy-list" id="trophyList"></ul>
+    <p class="empty" id="emptyNote" hidden>No trophies match these filters.</p>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <p class="roadmap-intro">Five stages, in order. The story is reported to take around 60 hours and the whole platinum around 200 hours (VGC / Push Square and GTA Vibes, via the Sources tab). Keep cheats off the whole way: turning one on is reported to disable trophies and saving.</p>
+    <div id="roadmapStages"></div>
+  </section>
+
+  <section id="view-sources" class="view" hidden>
+    <h2>Sources &amp; method</h2>
+    <p>Every trophy&rsquo;s guide is written in our own words for this guide. The names, descriptions and grades are PlayStation&rsquo;s official text, taken 18&nbsp;Nov&nbsp;2026 from Exophase and cross-checked with PSNProfiles and TrueAchievements. Where a location or a method is not reliably reported yet &mdash; the game launched 19&nbsp;Nov&nbsp;2026 &mdash; the guide says so instead of inventing one.</p>
+    <ul class="source-list" id="sourceList"></ul>
+    <p class="method-note">Missable calls: only &ldquo;Positive Mental Attitude&rdquo; is flagged, because GTABase and PowerPyx are the sources that flag it; other launch-day lists say no reliable missable list exists yet. Counts (250 stunts, 42 shooting-range challenges, 100 WAiNK locations and the rest) come from the official descriptions themselves.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Unofficial fan guide. Not affiliated with Rockstar Games, Take-Two Interactive or Sony Interactive Entertainment. Trophy names and descriptions are PlayStation&rsquo;s official text; all guide text is original. No Rockstar artwork or logo is used anywhere in this guide.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
